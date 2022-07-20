@@ -1,5 +1,8 @@
 doctrine:
     dbal:
+        types:
+            TechnoType: App\DBAL\Types\TechnoType
+
         url: '%env(resolve:DATABASE_URL)%'
 
         # IMPORTANT: You MUST configure your server version,
