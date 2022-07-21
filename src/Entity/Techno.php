@@ -24,6 +24,9 @@ class Techno
     #[DoctrineAssert\EnumType(entity: TechnoType::class)]
     private string $front_back;
 
+    #[ORM\Column]
+    private ?int $level = null;
+
     #[ORM\ManyToMany(targetEntity: Realisation::class, mappedBy: 'technos')]
     private Collection $realisations;
 
@@ -60,6 +63,16 @@ class Techno
         $this->front_back = $front_back;
 
         return $this;
+    }
+
+    public function getLevel(): ?int
+    {
+        return $this->level;
+    }
+
+    public function setLevel(?int $level): void
+    {
+        $this->level = $level;
     }
 
     /**

@@ -39,20 +39,30 @@ class TechnoRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Techno[] Returns an array of Techno objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('t')
-//            ->andWhere('t.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('t.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    /**
+     * @return Techno[] Returns an array of Techno objects
+     */
+    public function findByFrontTechno(): array
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.front_back = :val')
+            ->setParameter('val', 'front')
+            ->orderBy('t.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
+    public function findByBackTechno(): array
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.front_back = :val')
+            ->setParameter('val', 'back')
+            ->orderBy('t.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+            ;
+    }
 
 //    public function findOneBySomeField($value): ?Techno
 //    {
