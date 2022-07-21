@@ -39,20 +39,14 @@ class DegreeRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Degree[] Returns an array of Degree objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('d')
-//            ->andWhere('d.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('d.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    public function findAllByDate(): array
+    {
+        return $this->createQueryBuilder('d')
+            ->orderBy('d.endDate', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 
 //    public function findOneBySomeField($value): ?Degree
 //    {

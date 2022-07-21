@@ -1,8 +1,22 @@
 <section id="realisations">
     <div class="container">
         <div class="col-12 py-4 px-4">
-            <h4 class="display-4 text-end">Expériences professionnelles</h4>
+            <h4 class="display-4 text-end">Mes réalisations</h4>
             <hr>
+        </div>
+        <div class="row d-flex justify-content-center">
+            {% for realisation in realisations %}
+            <div class="col-md-6">
+                <div class="card mb-5" style="height: 28rem;">
+                    <img src="{{ asset('images/'~realisation.picture) }}" class="card-img-top" style="height: 18rem;"
+                         alt="{{ realisation.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ realisation.name }}</h5>
+                        <p class="card-text">{{ realisation.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

@@ -16,7 +16,7 @@
                         {% for degree in degrees %}
                             <li class="list-inline-item items-list">
                                 <div class="px-4">
-                                    <div class="event-date badge bg-info">{{ degree.startDate|date("m/Y") }} ->
+                                    <div class="event-date badge" style="background-color: #D92562">{{ degree.startDate|date("m/Y") }} ->
                                         {{ degree.endDate|date("m/Y") }}</div>
                                     <h5 class="pt-2">{{ degree.school }}</h5>
                                     <p class="text-muted">{{ degree.name }}</p>
