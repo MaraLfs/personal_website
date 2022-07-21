@@ -15,7 +15,10 @@ class Degree
     private ?int $id = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $date = null;
+    private ?\DateTimeInterface $start_date = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $end_date = null;
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
@@ -37,16 +40,26 @@ class Degree
         return $this->id;
     }
 
-    public function getDate(): ?\DateTimeInterface
+
+    public function getStartDate(): ?\DateTimeInterface
     {
-        return $this->date;
+        return $this->start_date;
     }
 
-    public function setDate(\DateTimeInterface $date): self
-    {
-        $this->date = $date;
 
-        return $this;
+    public function setStartDate(?\DateTimeInterface $start_date): void
+    {
+        $this->start_date = $start_date;
+    }
+
+    public function getEndDate(): ?\DateTimeInterface
+    {
+        return $this->end_date;
+    }
+
+    public function setEndDate(?\DateTimeInterface $end_date): void
+    {
+        $this->end_date = $end_date;
     }
 
     public function getName(): ?string
