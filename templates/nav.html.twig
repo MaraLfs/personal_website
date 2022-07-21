@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg sticky-top wow fadeIn pe-md-3" id="navbar">
+    <button type="button" class="navbar-toggler collapsed text-center" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-expanded="false">
+        <i class="bi bi-code-square" style='font-size:24px; color: white;'></i>
+    </button>
+
+    <div class="navbar-collapse py-4 py-lg-0 collapse" id="navbarCollapse">
+        <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item active mx-lg-4">
+                <a href="#home"
+                   class="d-flex align-items-center text-decoration-none">
+                    <i class="bi bi-house-door-fill" style="color: white; font-size: 1rem;"></i> </a>
+            </li>
+            <li class="nav-item ">
+                <a href="#about" class="nav-link link-dark text-white"
+                   aria-current="page">À propos</a>
+            </li>
+            <li class="nav-item ">
+                <a href="#skills" class="btn nav-link link-dark text-white">Compétences</a>
+            </li>
+            <li class="nav-item ">
+                <a href=" {{ path('app_home') }} "
+                   class="btn nav-link link-dark text-white">Diplômes</a>
+            </li>
+            <li class="nav-item ">
+                <a href=" {{ path('app_home') }} "
+                   class="btn nav-link link-dark text-white">Réalisations</a>
+            </li>
+            <li class="nav-item ">
+                <a href=" {{ path('app_home') }} "
+                   class="btn nav-link link-dark text-white">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
