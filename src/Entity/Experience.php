@@ -15,13 +15,13 @@ class Experience
     private ?int $id = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $start_date = null;
+    private ?\DateTimeInterface $startDate = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $end_date = null;
+    private ?\DateTimeInterface $endDate = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $compagny_name = null;
+    private ?string $compagnyName = null;
 
     #[ORM\Column(length: 255)]
     private ?string $occupation = null;
@@ -33,7 +33,7 @@ class Experience
     private ?string $city = null;
 
     #[ORM\Column]
-    private ?int $zip_code = null;
+    private ?int $zipCode = null;
 
     public function getId(): ?int
     {
@@ -42,36 +42,36 @@ class Experience
 
     public function getStartDate(): ?\DateTimeInterface
     {
-        return $this->start_date;
+        return $this->startDate;
     }
 
-    public function setStartDate(\DateTimeInterface $start_date): self
+    public function setStartDate(\DateTimeInterface $startDate): self
     {
-        $this->start_date = $start_date;
+        $this->startDate = $startDate;
 
         return $this;
     }
 
     public function getEndDate(): ?\DateTimeInterface
     {
-        return $this->end_date;
+        return $this->endDate;
     }
 
-    public function setEndDate(\DateTimeInterface $end_date): self
+    public function setEndDate(\DateTimeInterface $endDate): self
     {
-        $this->end_date = $end_date;
+        $this->endDate = $endDate;
 
         return $this;
     }
 
     public function getCompagnyName(): ?string
     {
-        return $this->compagny_name;
+        return $this->compagnyName;
     }
 
-    public function setCompagnyName(string $compagny_name): self
+    public function setCompagnyName(string $compagnyName): self
     {
-        $this->compagny_name = $compagny_name;
+        $this->compagnyName = $compagnyName;
 
         return $this;
     }
@@ -114,12 +114,12 @@ class Experience
 
     public function getZipCode(): ?int
     {
-        return $this->zip_code;
+        return $this->zipCode;
     }
 
-    public function setZipCode(int $zip_code): self
+    public function setZipCode(int $zipCode): self
     {
-        $this->zip_code = $zip_code;
+        $this->zipCode = $zipCode;
 
         return $this;
     }

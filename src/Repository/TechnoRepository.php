@@ -45,7 +45,7 @@ class TechnoRepository extends ServiceEntityRepository
     public function findByFrontTechno(): array
     {
         return $this->createQueryBuilder('t')
-            ->andWhere('t.front_back = :val')
+            ->andWhere('t.frontBack = :val')
             ->setParameter('val', 'front')
             ->orderBy('t.id', 'ASC')
             ->getQuery()
@@ -56,7 +56,7 @@ class TechnoRepository extends ServiceEntityRepository
     public function findByBackTechno(): array
     {
         return $this->createQueryBuilder('t')
-            ->andWhere('t.front_back = :val')
+            ->andWhere('t.frontBack = :val')
             ->setParameter('val', 'back')
             ->orderBy('t.id', 'ASC')
             ->getQuery()

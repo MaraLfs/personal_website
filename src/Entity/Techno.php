@@ -22,7 +22,7 @@ class Techno
 
     #[ORM\Column(type: 'TechnoType')]
     #[DoctrineAssert\EnumType(entity: TechnoType::class)]
-    private string $front_back;
+    private string $frontBack;
 
     #[ORM\Column]
     private ?int $level = null;
@@ -54,13 +54,13 @@ class Techno
 
     public function getFrontBack(): ?string
     {
-        return $this->front_back;
+        return $this->frontBack;
     }
 
-    public function setFrontBack(string $front_back): self
+    public function setFrontBack(string $frontBack): self
     {
-        TechnoType::assertValidChoice($front_back);
-        $this->front_back = $front_back;
+        TechnoType::assertValidChoice($frontBack);
+        $this->frontBack = $frontBack;
 
         return $this;
     }
