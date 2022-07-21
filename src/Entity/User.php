@@ -30,16 +30,16 @@ class User
     private ?string $city = null;
 
     #[ORM\Column]
-    private ?int $zip_code = null;
+    private ?int $zipCode = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $picture = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $linkedin_link = null;
+    private ?string $linkedinLink = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $github_link = null;
+    private ?string $githubLink = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $password = null;
@@ -111,12 +111,12 @@ class User
 
     public function getZipCode(): ?int
     {
-        return $this->zip_code;
+        return $this->zipCode;
     }
 
-    public function setZipCode(int $zip_code): self
+    public function setZipCode(int $zipCode): self
     {
-        $this->zip_code = $zip_code;
+        $this->zipCode = $zipCode;
 
         return $this;
     }
@@ -135,24 +135,24 @@ class User
 
     public function getLinkedinLink(): ?string
     {
-        return $this->linkedin_link;
+        return $this->linkedinLink;
     }
 
-    public function setLinkedinLink(?string $linkedin_link): self
+    public function setLinkedinLink(?string $linkedinLink): self
     {
-        $this->linkedin_link = $linkedin_link;
+        $this->linkedinLink = $linkedinLink;
 
         return $this;
     }
 
     public function getGithubLink(): ?string
     {
-        return $this->github_link;
+        return $this->githubLink;
     }
 
-    public function setGithubLink(?string $github_link): self
+    public function setGithubLink(?string $githubLink): self
     {
-        $this->github_link = $github_link;
+        $this->githubLink = $githubLink;
 
         return $this;
     }

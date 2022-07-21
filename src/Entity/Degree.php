@@ -15,10 +15,10 @@ class Degree
     private ?int $id = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $start_date = null;
+    private ?\DateTimeInterface $startDate = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
-    private ?\DateTimeInterface $end_date = null;
+    private ?\DateTimeInterface $endDate = null;
 
     #[ORM\Column(length: 255)]
     private ?string $name = null;
@@ -30,7 +30,7 @@ class Degree
     private ?string $city = null;
 
     #[ORM\Column]
-    private ?int $zip_code = null;
+    private ?int $zipCode = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
@@ -43,23 +43,23 @@ class Degree
 
     public function getStartDate(): ?\DateTimeInterface
     {
-        return $this->start_date;
+        return $this->startDate;
     }
 
 
-    public function setStartDate(?\DateTimeInterface $start_date): void
+    public function setStartDate(?\DateTimeInterface $startDate): void
     {
-        $this->start_date = $start_date;
+        $this->startDate = $startDate;
     }
 
     public function getEndDate(): ?\DateTimeInterface
     {
-        return $this->end_date;
+        return $this->endDate;
     }
 
-    public function setEndDate(?\DateTimeInterface $end_date): void
+    public function setEndDate(?\DateTimeInterface $endDate): void
     {
-        $this->end_date = $end_date;
+        $this->endDate = $endDate;
     }
 
     public function getName(): ?string
@@ -100,12 +100,12 @@ class Degree
 
     public function getZipCode(): ?int
     {
-        return $this->zip_code;
+        return $this->zipCode;
     }
 
-    public function setZipCode(int $zip_code): self
+    public function setZipCode(int $zipCode): self
     {
-        $this->zip_code = $zip_code;
+        $this->zipCode = $zipCode;
 
         return $this;
     }

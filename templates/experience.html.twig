@@ -1,3 +1,39 @@
-<section id="experiences">
-
+<section id="experiences" style="background-color: whitesmoke;">
+    <div class="container">
+        <div class="col-12 py-4 px-4">
+            <h4 class="display-4 text-end">Expériences professionnelles</h4>
+            <hr>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="main-timeline-4 text-white">
+            {% for experience in experiences %}
+                {% if loop.index0 is divisible by(2) %}
+                    <div class="timeline-4 left-4">
+                        <div class="card gradient-custom">
+                            <div class="card-body p-4">
+                                <h4>{{ experience.compagnyName }}, {{ experience.city }} ({{ experience.zipCode }})</h4>
+                                <p class="small text-white-50 mb-2">De {{ experience.startDate|date("m/Y") }} à
+                                    {{ experience.endDate|date("m/Y") }} </p>
+                                <p>{{ experience.occupation }}</p>
+                                <p>{{ experience.description|nl2br }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="timeline-4 right-4">
+                        <div class="card gradient-custom-4">
+                            <div class="card-body p-4">
+                                <h4>{{ experience.compagnyName }}, {{ experience.city }} ({{ experience.zipCode }})</h4>
+                                <p class="small text-white-50 mb-2">De {{ experience.startDate|date("m/Y") }} à
+                                    {{ experience.endDate|date("m/Y") }} </p>
+                                <p>{{ experience.occupation }}</p>
+                                <p>{{ experience.description|nl2br }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
 </section>
