@@ -8,7 +8,7 @@
             {% for realisation in realisations %}
             <div class="col-md-6">
                 <div class="card mb-5" style="height: 28rem;">
-                    <img src="{{ asset('images/'~realisation.picture) }}" class="card-img-top" style="height: 18rem;"
+                    <img src="{{ asset('images/'~realisation.picture) }}" class="card-img-top" style="width: auto; height: 18rem; object-fit: cover; object-position: center"
                          alt="{{ realisation.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ realisation.name }}</h5>
